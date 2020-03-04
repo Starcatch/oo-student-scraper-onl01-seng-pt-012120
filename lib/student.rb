@@ -29,7 +29,12 @@ class Student
   def add_student_attributes(attributes_hash)
     #uses the Scraper class to get a hash of a given students attributes and uses that hash to set 
     #additional attributes for that student
-    
+    self.send("twitter=", attributes_hash[:twitter])
+    self.send("linkedin=", attributes_hash[:linkedin])
+    self.send("github=", attributes_hash[:github])
+    self.send("blog=", attributes_hash[:blog])
+    self.send("profile_quote=", attributes_hash[:profile_quote])
+    self.send("bio=", attributes_hash[:bio])
   end
 
   def self.all
